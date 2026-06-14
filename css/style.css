@@ -1,0 +1,753 @@
+:root{
+
+    --bg:#f5f2eb;
+    --surface:#fcfbf8;
+
+    --primary:#6f4e37;
+    --secondary:#b08968;
+    --accent:#a3b18a;
+
+    --text:#2c2a28;
+    --muted:#6d6a66;
+
+    --border:#ddd4c8;
+
+    --shadow:
+    0 12px 30px rgba(0,0,0,.06);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+        180deg,
+        #f8f5ef 0%,
+        #efe8dd 100%
+    );
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+section{
+
+    scroll-margin-top:90px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+    padding-left:0;
+
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.light-section{
+
+    background:#ece6da;
+
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+
+    text-transform:uppercase;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    font-size:.9rem;
+
+}
+
+.section-title h2{
+
+    margin-top:15px;
+
+    font-size:clamp(2rem,5vw,3rem);
+
+    font-weight:700;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.business-nav{
+
+    background:rgba(111,78,55,.95);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    padding:12px 0;
+
+}
+
+.navbar-brand{
+
+    color:white !important;
+
+    font-weight:800;
+
+    font-size:1.5rem;
+
+}
+
+.navbar-toggler{
+
+    background:white;
+
+}
+
+.nav-link{
+
+    color:#f7f5f1 !important;
+
+    margin-left:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#d8c2a6 !important;
+
+}
+
+.active-link{
+
+    color:#d8c2a6 !important;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:90px;
+
+}
+
+.status-pill{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    background:#ebe3d5;
+
+    color:var(--primary);
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(3rem,8vw,5rem);
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero h2{
+
+    color:var(--secondary);
+
+    margin-top:15px;
+
+    min-height:40px;
+
+    font-weight:600;
+
+}
+
+.hero-text{
+
+    margin-top:25px;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+    max-width:650px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.primary-btn{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    background:#563a28;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+.secondary-btn{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================
+   SOCIAL
+========================== */
+
+.social-links{
+
+    margin-top:30px;
+
+}
+
+.social-links a{
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+    margin-right:20px;
+
+    transition:.3s;
+
+}
+
+.social-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.profile-card,
+.about-card,
+.skill-card,
+.project-card,
+.contact-form{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================
+   PROFILE
+========================== */
+
+.profile-card{
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.avatar-wrapper{
+
+    width:260px;
+
+    height:260px;
+
+    margin:auto;
+
+}
+
+.profile-image{
+
+    width:100%;
+
+    height:100%;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #e6dccf;
+
+}
+
+.profile-info h3{
+
+    margin-top:25px;
+
+    font-weight:700;
+
+}
+
+.profile-info p{
+
+    color:var(--muted);
+
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about-card{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+.about-card p{
+
+    color:var(--muted);
+
+    line-height:2;
+
+}
+
+/* ==========================
+   SKILLS
+========================== */
+
+.skill-card{
+
+    padding:35px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+.skill-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.skill-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+}
+
+.skill-card h4{
+
+    margin:20px 0;
+
+    font-weight:700;
+
+}
+
+.skill-card li{
+
+    padding:8px 0;
+
+    color:var(--muted);
+
+}
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.project-card{
+
+    padding:35px;
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.project-icon{
+
+    width:70px;
+
+    height:70px;
+
+    background:#ebe3d5;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+}
+
+.project-icon i{
+
+    color:var(--primary);
+
+    font-size:2rem;
+
+}
+
+.project-card p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+.contact-form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+.form-control{
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:14px;
+
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:none;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    background:#6f4e37;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:white;
+
+    margin:0;
+
+}
+
+/* ==========================
+   TOP BUTTON
+========================== */
+
+#topBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    display:none;
+
+    z-index:999;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:.8s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:991px){
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .social-links{
+
+        text-align:center;
+
+    }
+
+    .profile-card{
+
+        margin-top:40px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .section{
+
+        padding:80px 0;
+
+    }
+
+    .avatar-wrapper{
+
+        width:220px;
+        height:220px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ==========================
+   CERTIFICATIONS
+========================== */
+
+.cert-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    height:100%;
+
+    transition:.35s;
+
+}
+
+.cert-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--secondary);
+
+}
+
+.cert-card i{
+
+    font-size:3rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.cert-card h5{
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.cert-card p{
+
+    color:var(--muted);
+
+    margin:0;
+
+}
